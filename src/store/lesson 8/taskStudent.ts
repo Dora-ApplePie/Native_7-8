@@ -54,10 +54,7 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
     for (let y = 1; y < arr.length; y = y + 2) {
         oddNumb = oddNumb + arr[y]
     }
-    if (evenNumb > oddNumb) {
-        return true
-    } else
-        return false
+    return evenNumb > oddNumb
 }
 
 
