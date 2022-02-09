@@ -1,4 +1,4 @@
-import {getSum, getTriangleType, isEvenIndexSumGreater, sum} from "./taskStudent";
+import {getSum, getTriangleType, isEvenIndexSumGreater, isSquareGreater, sum} from "./taskStudent";
 
 test("sum of el", () => {
     expect(sum(1, 2, 3, 4, 5)).toBe(15)
@@ -20,4 +20,8 @@ test("sum of el of number", () => {
 
 test("sum of el of array", () => {
     expect(isEvenIndexSumGreater([1, 2, 3, 4, 5])).toBe(true)
+})
+
+test("Circle is not larger than a square", () => {
+    expect(isSquareGreater(44, 23)).toBe(true)
 })

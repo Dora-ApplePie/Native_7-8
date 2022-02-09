@@ -48,6 +48,7 @@ export function getSum(number: number): number {
 export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
     let evenNumb = 0;
     let oddNumb = 0;
+
     for (let x = 0; x < arr.length; x += 2) {
         evenNumb = evenNumb + arr[x]
     }
@@ -63,9 +64,9 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
 // квадрата и false в противном случае. Центры фигур совпадают.
 
 export function isSquareGreater(areaCr: number, areaSq: number): boolean {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return true
+    let SQ = areaSq //сторона квадрата
+    let СR = Math.sqrt((areaCr/ Math.PI) * 4)  //диаметр круга
+    return СR <= SQ
 }
 
 
