@@ -1,4 +1,4 @@
-import {getTriangleType, sum} from "./taskStudent";
+import {getSum, getTriangleType, sum} from "./taskStudent";
 
 test("sum of el", () => {
     expect(sum(1, 2, 3, 4, 5)).toBe(15)
@@ -11,4 +11,9 @@ test("get type of triangle", () => {
     expect(getTriangleType(3, 3, 2)).toBe("01")
     expect(getTriangleType(4, 5, 3)).toBe("11")
     expect(getTriangleType(10, 2, 2)).toBe("00")
+})
+
+test("sum of el of number", () => {
+    expect(getSum(66)).toBe(12)
+    expect(getSum(1000)).toBe(1)
 })
