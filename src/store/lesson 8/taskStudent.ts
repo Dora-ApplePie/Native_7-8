@@ -1,12 +1,14 @@
 // 1. Функция sum принимает параметром целые положительные
 // числа (неопределённое кол-во) и возвращает их сумму (rest).
 
-export function sum(...nums: Array<number>): number {
+export function sum(...nums: Array<any>): number { //все элементы nums будут собираться ... в массив
+    debugger;
     return nums.reduce((sum, el) => {
         let sumNum = sum + el
         return sumNum
-    }, 0)
+    })
 } // rest оператор закидывает все остаточные значения
+console.log(sum(1, 2, 3))
 
 // 2. Функция getTriangleType принимает три параметра:
 // длины сторон треугольника.
@@ -17,8 +19,15 @@ export function sum(...nums: Array<number>): number {
 //  - "00", если такого треугольника не существует.
 
 export function getTriangleType(a: number, b: number, c: number): string {
-
-    return ""
+    const isTriangle = a + b > c && a + c > b && b + c > a;
+    if (a === b && b === c && c === a) {
+        return "10"
+    } else if (isTriangle && (a === b || a === c || b === c)) {
+        return "01"
+    } else if (!isTriangle) {
+        return "00"
+    } else
+        return "11"
 }
 
 
