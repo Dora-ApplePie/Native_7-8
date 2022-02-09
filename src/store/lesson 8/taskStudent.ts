@@ -48,10 +48,10 @@ export function getSum(number: number): number {
 export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
     let evenNumb = 0;
     let oddNumb = 0;
-    for (let x = 0; x < arr.length; x = x + 2) {
+    for (let x = 0; x < arr.length; x += 2) {
         evenNumb = evenNumb + arr[x]
     }
-    for (let y = 1; y < arr.length; y = y + 2) {
+    for (let y = 1; y < arr.length; y += 2) {
         oddNumb = oddNumb + arr[y]
     }
     return evenNumb > oddNumb
