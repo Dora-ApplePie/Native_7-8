@@ -46,9 +46,18 @@ export function getSum(number: number): number {
 // В противном случае - false.
 
 export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return true
+    let evenNumb = 0;
+    let oddNumb = 0;
+    for (let x = 0; x < arr.length; x = x + 2) {
+        evenNumb = evenNumb + arr[x]
+    }
+    for (let y = 1; y < arr.length; y = y + 2) {
+        oddNumb = oddNumb + arr[y]
+    }
+    if (evenNumb > oddNumb) {
+        return true
+    } else
+        return false
 }
 
 

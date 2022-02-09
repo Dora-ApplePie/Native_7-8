@@ -1,4 +1,4 @@
-import {getSum, getTriangleType, sum} from "./taskStudent";
+import {getSum, getTriangleType, isEvenIndexSumGreater, sum} from "./taskStudent";
 
 test("sum of el", () => {
     expect(sum(1, 2, 3, 4, 5)).toBe(15)
@@ -16,4 +16,8 @@ test("get type of triangle", () => {
 test("sum of el of number", () => {
     expect(getSum(66)).toBe(12)
     expect(getSum(1000)).toBe(1)
+})
+
+test("sum of el of array", () => {
+    expect(isEvenIndexSumGreater([1, 2, 3, 4, 5])).toBe(true)
 })
