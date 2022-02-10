@@ -76,11 +76,6 @@ export function isSquareGreater(areaCr: number, areaSq: number): boolean {
 // const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1].
 // Считаем, что количество банкнот каждого номинала не ограничено
 //
-// export function getBanknoteList(amountOfMoney: number): Array<number> {
-//     const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
-//
-//     return arr
-// }
 
 export function getBanknoteList(amountOfMoney: number): Array<number> {
     const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
