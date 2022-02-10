@@ -65,7 +65,7 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
 
 export function isSquareGreater(areaCr: number, areaSq: number): boolean {
     let SQ = areaSq //сторона квадрата
-    let СR = Math.sqrt((areaCr/ Math.PI) * 4)  //диаметр круга
+    let СR = Math.sqrt((areaCr / Math.PI) * 4)  //диаметр круга
     return СR <= SQ
 }
 
@@ -75,10 +75,25 @@ export function isSquareGreater(areaCr: number, areaSq: number): boolean {
 // сумму. Доступны банкноты следующих номиналов:
 // const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1].
 // Считаем, что количество банкнот каждого номинала не ограничено
+//
+// export function getBanknoteList(amountOfMoney: number): Array<number> {
+//     const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+//
+//     return arr
+// }
 
-// Д.З.:
 export function getBanknoteList(amountOfMoney: number): Array<number> {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return [1]
+    const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
+    let arr = [];
+    if (amountOfMoney > 0){
+        for (let i = 0; i < banknotes.length; i++) {
+            while (amountOfMoney - banknotes[i] >= 0) {
+                amountOfMoney -= banknotes[i]
+                arr.push(banknotes[i])
+            }
+        }
+    } else {
+        console.log("We can't give your amount of money:" + amountOfMoney)
+    }
+    return arr
 }
